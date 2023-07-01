@@ -75,16 +75,16 @@ export default function useColorPicker() {
         secondaryColor,
         customColor,
         render: (
-            <Box my={1} back display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"} className={"boxShadow"}>
+            <Box bgcolor={"wheat"} my={1} back display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"flex-end"} className={"boxShadow"}>
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "asmoS" }}>
                     <b>Color Picker</b>
                 </Typography>
                 <Box p={1} pt={0} display={"flex"} justifyContent={"flex-end"} >
-                    <Container fixed disableGutters sx={{ mx: 1, width: colorWidth, height: colorHeight, bgcolor: primaryColor }} onClick={() => openModal("primary")}>
+                    <Container fixed sx={{ mx: 1, borderRadius:'5px', borderWidth:'5px', width: colorWidth, height: colorHeight, bgcolor: primaryColor }} onClick={() => openModal("primary")}>
                     </Container>
-                    <Container fixed disableGutters sx={{ mx: 1, width: colorWidth, height: colorHeight, bgcolor: secondaryColor }} onClick={() => openModal("secondary")}>
+                    <Container fixed disableGutters sx={{ mx: 1, borderRadius:'5px', borderWidth:'5px', width: colorWidth, height: colorHeight, bgcolor: secondaryColor }} onClick={() => openModal("secondary")}>
                     </Container>
-                    <Container fixed disableGutters sx={{ mx: 1, width: colorWidth, height: colorHeight, bgcolor: customColor }} onClick={() => openModal("custom")}>
+                    <Container fixed disableGutters sx={{ mx: 1, borderRadius:'5px', borderWidth:'5px', width: colorWidth, height: colorHeight, bgcolor: customColor }} onClick={() => openModal("custom")}>
                     </Container>
                 </Box>
                 <Box>
